@@ -4,6 +4,7 @@ import Services from '../components/Services PRoviders/Services';
 import WhyChooseUs from '../Sections/WhyChooseUs';
 import LoaderRing from '../components/LoaderRing';
 import HowItWorks from '../Sections/HowItWorks';
+import Testimonial from '../Sections/Testimonial';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <Services></Services>
             <WhyChooseUs></WhyChooseUs>
             <HowItWorks></HowItWorks>
+            <Testimonial></Testimonial>
         </div>
     );
 };
