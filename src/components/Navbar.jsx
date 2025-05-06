@@ -13,8 +13,8 @@ const Navbar = () => {
     )
 
     return (
-        <div className="bg-[#E2E2E2] shadow-sm rounded-xl">
-            <div className="navbar container mx-auto">
+        <div className="shadow-sm rounded-xl mb-8">
+            <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,7 +26,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-3xl">BillEz</a>
+                    <a className="btn btn-ghost font-black text-3xl">BillEZ</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

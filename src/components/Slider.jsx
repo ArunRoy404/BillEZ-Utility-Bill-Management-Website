@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css/effect-fade';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Autoplay, EffectFade, Pagination, EffectCreative } from 'swiper/modules';
+import SliderBanner from './SliderBanner';
 
-// import required modules
-import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
+const carousalDataPromise = fetch('carousal.json').then(res => res.json())
+
 
 const Slider = () => {
+
+    const carousalData = use(carousalDataPromise)
+    console.log(carousalData);
+
+
     return (
         <Swiper
             spaceBetween={30}
             loop={true}
             // effect={'fade'}
+            grabCursor={true}
+            effect={'creative'}
+            creativeEffect={{
+                prev: {
+                    shadow: true,
+                    translate: [0, 0, -400],
+                },
+                next: {
+                    translate: ['100%', 0, 0],
+                },
+            }}
             autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
@@ -22,43 +39,12 @@ const Slider = () => {
                 clickable: true,
             }}
 
-            modules={[EffectFade,Autoplay,Pagination]}
+            modules={[EffectCreative, EffectFade, Autoplay, Pagination]}
             className="mySwiper"
         >
-            <SwiperSlide><div className='border-2 h-100 bg-red-700'>slide 1</div></SwiperSlide>
-            <SwiperSlide><div className='border-2 h-100 bg-blue-700'>slide 1</div></SwiperSlide>
-            <SwiperSlide><div 
-      className="relative h-[500px] flex items-center justify-center text-white bg-cover bg-center rounded-lg"
-      style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
-      }}
-    >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-
-      {/* Slide Content */}
-      <div className="relative z-10 text-center px-6">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-          Pay Your Utility Bills in One Click
-        </h1>
-        <p className="text-lg md:text-xl mb-8 text-gray-200">
-          Fast. Secure. Hassle-Free.
-        </p>
-        <a
-          href="/bills"
-          className="inline-block bg-[#FF6D00] hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300"
-        >
-          Get Started
-        </a>
-      </div>
-    </div></SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+            {
+                carousalData.map(data=> <SwiperSlide><SliderBanner key={data.id} data={data}></SliderBanner></SwiperSlide>)
+            }
         </Swiper>
     );
 };

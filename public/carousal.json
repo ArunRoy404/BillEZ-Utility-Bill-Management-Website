@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "title": "Pay Your Utility Bills in One Click",
+      "subtitle": "Fast. Secure. Hassle-Free.",
+      "ctaText": "Get Started",
+      "ctaLink": "/bills",
+      "bgColor": "#0D47A1",
+      "imgLink": "https://i.ibb.co.com/DqHJwxH/c1.png"
+    },
+    {
+      "id": 2,
+      "title": "Trusted by Leading Utility Providers",
+      "subtitle": "We work with top organizations across Bangladesh",
+      "ctaText": "View All Partners",
+      "ctaLink": "/partners",
+      "bgColor": "#2E7D32",
+      "imgLink": "https://i.ibb.co.com/xKYRnrKz/image2.png"
+    },
+    {
+      "id": 3,
+      "title": "Why Choose BillEZ?",
+      "subtitle": "A smarter way to manage utility payments",
+      "features": [
+        { "icon": "✨", "text": "Instant Bill Payments" },
+        { "icon": "💳", "text": "No Hidden Charges" },
+        { "icon": "🔒", "text": "Fully Secure Platform" },
+        { "icon": "📱", "text": "Mobile Friendly Interface" }
+      ],
+      "ctaText": "Learn More",
+      "ctaLink": "/about",
+      "bgColor": "#FF6D00"
+    },
+    {
+      "id": 4,
+      "title": "Loved by Thousands",
+      "subtitle": "Join thousands of users who trust us with their utility payments",
+      "testimonial": {
+        "quote": "“I've been using BillEZ for months. It's super easy and fast!”",
+        "author": "Md. Rahman, Dhaka",
+        "avatar": "https://i.pravatar.cc/150?img=1"
+      },
+      "ctaText": "Read Reviews",
+      "ctaLink": "/testimonials",
+      "bgColor": "#00838F"
+    },
+    {
+      "id": 5,
+      "title": "Download the BillEZ App Today!",
+      "subtitle": "Available on Android & iOS – Manage bills anytime, anywhere",
+      "ctaText": "Explore Features",
+      "ctaLink": "/features",
+      "bgColor": "#AD1457",
+      "imgLink": "https://thumbs.dreamstime.com/b/google-play-app-store-icons-google-play-app-store-icons-editable-vector-illustration-isolated-white-background-123024624.jpg?w=768"
+
+    }
+  ]
