@@ -8,12 +8,8 @@ import SliderBanner from './SliderBanner';
 
 const carousalDataPromise = fetch('carousal.json').then(res => res.json())
 
-
 const Slider = () => {
-
     const carousalData = use(carousalDataPromise)
-    console.log(carousalData);
-
 
     return (
         <Swiper

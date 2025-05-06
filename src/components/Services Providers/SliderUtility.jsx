@@ -11,7 +11,6 @@ const utilitiesPromise = fetch('utilityProviders.json').then(res=> res.json())
 const SliderUtility = () => {
 
     const utilitiesPRoviders = use(utilitiesPromise)
-    console.log(utilitiesPRoviders);
 
     return (
         <>

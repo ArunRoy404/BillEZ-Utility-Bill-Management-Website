@@ -1,9 +1,7 @@
 import React from 'react';
-import ButtonCustom from './ButtonCustom';
+import ButtonCustom from '../ButtonCustom';
 
 const SliderBanner = ({ data }) => {
-
-    console.log(data);
     const { title, subtitle, ctaText, imgLink } = data
 
     return (

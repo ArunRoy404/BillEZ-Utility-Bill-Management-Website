@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
+import Loader from '../Loader';
 import SliderUtility from './SliderUtility';
-import Loader from './Loader';
 
 const Services = () => {
     return (

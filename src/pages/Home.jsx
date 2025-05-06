@@ -1,8 +1,7 @@
 import React, { Suspense } from 'react';
-import Slider from '../components/Slider';
+import Slider from '../components/Hero Carousal/Slider';
 import Loader from '../components/Loader';
-import Services from '../components/Services';
-import SliderUtility from '../components/SliderUtility';
+import Services from '../components/Services PRoviders/Services';
 
 const Home = () => {
     return (
