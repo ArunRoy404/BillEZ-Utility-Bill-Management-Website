@@ -32,7 +32,7 @@ const Slider = () => {
                 disableOnInteraction: false,
             }}
             modules={[EffectCreative, EffectFade, Autoplay, Pagination]}
-            className="mySwiper w-[90%]"
+            className="mySwiper"
         >
             {
                 carousalData.map(data=> <SwiperSlide><SliderBanner key={data.id} data={data}></SliderBanner></SwiperSlide>)
