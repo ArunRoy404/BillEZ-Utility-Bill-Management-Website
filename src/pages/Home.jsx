@@ -12,7 +12,9 @@ const Home = () => {
                     <Slider></Slider>
                 </Suspense>
                 <Services></Services>
-                <SliderUtility></SliderUtility>
+                <Suspense fallback={<div className='h-50 grid center'><Loader></Loader></div>}>
+                    <SliderUtility></SliderUtility>
+                </Suspense>
             </section>
         </div>
     );

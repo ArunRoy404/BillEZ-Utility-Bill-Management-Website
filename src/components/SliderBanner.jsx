@@ -8,7 +8,7 @@ const SliderBanner = ({ data }) => {
 
     return (
         <div className='border-2 flex gap-10 justify-center items-center h-100 bg-white rounded-2xl p-8  lg:p-16 lg:pl-10 '>
-            <div className='w-80 h-80 rounded-2xl overflow-hidden shadow-sm flex items-center justify-center'>
+            <div className='w-80 h-80 rounded-2xl overflow-hidden flex items-center justify-center'>
                 <img src={imgLink} alt="" />
             </div>
             <div className="flex flex-col justify-center lg:w-1/2">
