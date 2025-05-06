@@ -36,7 +36,7 @@ const Navbar = () => {
                 <div className="navbar-end">
                     <div className='space-x-4 font-bold'>
                         <Link to={'register'} className='text-sm' >Register</Link>
-                        <Link to={'/login'} className='btn btn-neutral shadow-none rounded-4xl'>Login</Link>
+                        <Link to={'/login'} className='btn btn-neutral shadow-none rounded-4xl hover:bg-white hover:text-black border-2 border-black '>Login</Link>
                     </div>
                     <Avatar></Avatar>
                 </div>

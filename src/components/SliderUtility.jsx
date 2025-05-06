@@ -29,9 +29,6 @@ const SliderUtility = () => {
                         disableOnInteraction: false,
                     }
                 }
-                pagination={{
-                    clickable: true,
-                }}
                 modules={[FreeMode, Autoplay, Pagination,Navigation , Keyboard]}
                 className="mySwiper"
             >

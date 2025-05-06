@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import SliderUtility from './SliderUtility';
+import Loader from './Loader';
 
 const Services = () => {
     return (
@@ -8,6 +10,9 @@ const Services = () => {
                 <p>Manage bills from top service providers in one place.</p>
                 <p>We support payments for electricity, gas, water, internet & more.</p>
             </div>
+            <Suspense fallback={<div className='h-50 grid center'><Loader></Loader></div>}>
+                <SliderUtility></SliderUtility>
+            </Suspense>
         </div>
     );
 };

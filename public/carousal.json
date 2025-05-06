@@ -29,7 +29,8 @@
       ],
       "ctaText": "Learn More",
       "ctaLink": "/about",
-      "bgColor": "#FF6D00"
+      "bgColor": "#FF6D00",
+      "imgLink": "https://i.ibb.co.com/C3VSPcDW/qs.png"
     },
     {
       "id": 4,
@@ -42,7 +43,8 @@
       },
       "ctaText": "Read Reviews",
       "ctaLink": "/testimonials",
-      "bgColor": "#00838F"
+      "bgColor": "#00838F",
+      "imgLink": "https://www.shutterstock.com/image-vector/heart-happy-face-icons-3d-600nw-2301196927.jpg"
     },
     {
       "id": 5,
