@@ -1,0 +1,116 @@
+[
+    {
+      "id": 1,
+      "name": "DESCO",
+      "type": "Electricity",
+      "logo": "https://play-lh.googleusercontent.com/6SONPi2ntkdffBNkxTLlmW8cw4XBcqUYbuNUJKSS4oLE3Au44FtfGK9ijDHjAh53lg"
+    },
+    {
+      "id": 2,
+      "name": "WASA",
+      "type": "Water",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5arnwzo3BGztiQD09rclQWqvmbFRntReHaw&s"
+    },
+    {
+      "id": 3,
+      "name": "NESCO",
+      "type": "Electricity",
+      "logo": "https://play-lh.googleusercontent.com/tz8FxCqx79A5OHw_P53RowWPlMpXcjhKuhMGYeoHnnWPya-PLeZWvI8ZxeNI4EGiiVWY"
+    },
+    {
+      "id": 4,
+      "name": "Tista Gas",
+      "type": "Gas",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6y6-I1aIBum_oQ-ZWPSMK9xEta0EhwHSkpg&s"
+    },
+    {
+      "id": 5,
+      "name": "Dhaka Power Distribution Company (DPDC)",
+      "type": "Electricity",
+      "logo": "https://i.ibb.co.com/6RKCMmsY/dpdc.png"
+    },
+    {
+      "id": 6,
+      "name": "Palli Bidyut",
+      "type": "Electricity",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv8GyDnigjOQKgJBXCjqGu4c9RrdsP0_g1YQ&s"
+    },
+    {
+      "id": 7,
+      "name": "Sheba Phone",
+      "type": "Internet",
+      "logo": "https://play-lh.googleusercontent.com/gB3i4Og8M4qsrjRg9P67MZoNsO0Q1P7DCEzkUqlNz-uL1E_Y1minQ_X_G0hd2xu1"
+    },
+    {
+      "id": 8,
+      "name": "Banglalion",
+      "type": "Internet",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlfgXCB-tTcBcB7Xx5JWE0vPl9AHd2gVJYOQ&s"
+    },
+    {
+      "id": 9,
+      "name": "Amber IT",
+      "type": "Internet",
+      "logo": "https://play-lh.googleusercontent.com/7Rg0bZ1_4XlecU0YtUD6rxUNroICQLGkCSn73kMnb71mY3QCzRyi8uuDywF2k_mCSro"
+    },
+    {
+      "id": 10,
+      "name": "Link3 Technologies",
+      "type": "Internet",
+      "logo": "https://images.seeklogo.com/logo-png/8/1/link3-logo-png_seeklogo-84448.png"
+    },
+    {
+      "id": 11,
+      "name": "Robi Axiata",
+      "type": "Mobile Network",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSsW4yBDnhzopabHysFljDkn6D8YA0XdKK-bhB4NdIcdcmtAeEaxmQTBMXYhN7AsNFZng&usqp=CAU"
+    },
+    {
+      "id": 12,
+      "name": "Airtel Bangladesh",
+      "type": "Mobile Network",
+      "logo": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/30455c9384889.57ee562a4fba0.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Teletalk",
+      "type": "Mobile Network",
+      "logo": "https://play-lh.googleusercontent.com/e99h2XlCDarz1Z7iKUy5f34w8iqcqHcCRguQEBWCQPC0Fpxqs4k3S9XZLurzv5C5aA"
+    },
+    {
+      "id": 15,
+      "name": "Pathao Courier",
+      "type": "Courier Service",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs845WyEp3E9rQ5ciyGWSnS4zs4dK0TtrEaA&s"
+    },
+    {
+      "id": 17,
+      "name": "Uber Bangladesh",
+      "type": "Transport Service",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYLYn6hSU1G4_3AFE6Rs8FJT9F-qchRY2DnA&s"
+    },
+    {
+      "id": 18,
+      "name": "Bikroy.com",
+      "type": "E-commerce",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMmNnF3QQyrvc9byNR3au0jPhb65FVkzGh_Q&s"
+    },
+    {
+      "id": 19,
+      "name": "Daraz Bangladesh",
+      "type": "E-commerce",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYdyBxyKCAbGUiqQ03FizpwnaSKJ-6d_1MzA&s"
+    },
+    {
+      "id": 20,
+      "name": "bKash",
+      "type": "Financial Service",
+      "logo": "https://downloadr2.apkmirror.com/wp-content/uploads/2020/03/5e6ab3fa58a91.png"
+    },
+    {
+      "id": 21,
+      "name": "Rocket",
+      "type": "Financial Service",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa72jjxmBhP7jDcL_d2ONde0G1ztGDxpfe9Q&s"
+    }
+  ]
