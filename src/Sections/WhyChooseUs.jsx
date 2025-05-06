@@ -33,11 +33,11 @@ const WhyChooseUs = () => {
 
     return (
         <section className="py-16">
-            <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mx-auto px-6">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                     Why Choose BillEZ?
                 </h2>
-                <p className="opacity-70 font-black mb-12 max-w-2xl ">
+                <p className="opacity-70 font-black mb-12">
                     A smarter way to manage utility bills — simple, secure, and stress-free.
                 </p>
 
