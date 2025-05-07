@@ -45,5 +45,36 @@ const testimonials = [
         "Loving the features! The only thing I'd like is more customization options for notifications.",
     },
   ];
+
+  const statsData = [
+    {
+      id: 1,
+      title: "Happy Users",
+      value: "100",
+      suffix: "K+",
+      description: "Trusted by users across Bangladesh",
+    },
+    {
+      id: 2,
+      title: "Bills Paid",
+      value: "5000",
+      suffix: "K+",
+      description: "Successfully processed with ease",
+    },
+    {
+      id: 3,
+      title: "Utility Providers",
+      value: "50",
+      suffix: "+",
+      description: "Supported electricity, gas, water & more",
+    },
+    {
+      id: 4,
+      title: "Monthly Transactions",
+      value: "100",
+      suffix: "K+",
+      description: "Fast and secure payments every month",
+    },
+  ];
   
-  export default testimonials;
+  export {testimonials, statsData};

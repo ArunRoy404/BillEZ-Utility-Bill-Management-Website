@@ -5,6 +5,7 @@ import WhyChooseUs from '../Sections/WhyChooseUs';
 import LoaderRing from '../components/LoaderRing';
 import HowItWorks from '../Sections/HowItWorks';
 import Testimonial from '../Sections/Testimonial';
+import Stats from '../Sections/Stats';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <WhyChooseUs></WhyChooseUs>
             <HowItWorks></HowItWorks>
             <Testimonial></Testimonial>
+            <Stats></Stats>
         </div>
     );
 };

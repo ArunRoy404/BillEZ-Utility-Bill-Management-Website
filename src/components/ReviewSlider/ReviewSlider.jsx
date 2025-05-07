@@ -3,14 +3,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { Autoplay, EffectCards } from 'swiper/modules';
-import testimonials from '../../utilities/testimonials';
 import Review from '../Review';
+import { testimonials } from '../../utilities/data';
 
 
 const ReviewSlider = () => {
 
     return (
-        <div>
+        <div className='w-[80%] mx-auto'>
             <Swiper
                 effect={'cards'}
                 grabCursor={true}
