@@ -1,6 +1,9 @@
 import { createBrowserRouter, } from "react-router";
 import HomeLayout from "../layouts/HomeLayout";
 import Home from "../pages/Home";
+import Bills from "../pages/Bills";
+import LoaderRing from "../components/LoaderRing";
+import BillDetails from "../components/BillCard/BillDetails";
 
 
 const router = createBrowserRouter([
@@ -14,7 +17,13 @@ const router = createBrowserRouter([
             },
             {
                 path: '/bills',
-                element: <h1>hello</h1>
+                loader: ()=> fetch('../bills.json') ,
+                hydrateFallbackElement: <div className="h-[80vh] flex items-center justify-center"><LoaderRing></LoaderRing></div>,
+                Component: Bills,
+            },
+            {
+                path: '/bills/:bill-id',
+                Component: BillDetails
             },
             {
                 path: '/my-profile',

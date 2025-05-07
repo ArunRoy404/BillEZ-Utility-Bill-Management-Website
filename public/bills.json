@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "bill_type": "electricity",
+        "image_url": "https://play-lh.googleusercontent.com/6SONPi2ntkdffBNkxTLlmW8cw4XBcqUYbuNUJKSS4oLE3Au44FtfGK9ijDHjAh53lg",
+        "organization": "DESCO",
+        "amount": 1890,
+        "due_date": "2025-03-22T06:57:58.110Z"
+    },
+    {
+        "id": 2,
+        "bill_type": "gas",
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6y6-I1aIBum_oQ-ZWPSMK9xEta0EhwHSkpg&s",
+        "organization": "Tista Gas",
+        "amount": 1488,
+        "due_date": "2025-03-28T06:57:58.110Z"
+    },
+    {
+        "id": 3,
+        "bill_type": "water",
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5arnwzo3BGztiQD09rclQWqvmbFRntReHaw&s",
+        "organization": "WASA",
+        "amount": 320,
+        "due_date": "2025-04-01T08:00:00.000Z"
+    },
+    {
+        "id": 4,
+        "bill_type": "internet",
+        "image_url": "https://images.seeklogo.com/logo-png/8/1/link3-logo-png_seeklogo-84448.png",
+        "organization": "Sheba Phone",
+        "amount": 750,
+        "due_date": "2025-04-05T10:00:00.000Z"
+    },
+    {
+        "id": 5,
+        "bill_type": "credit card",
+        "image_url": "https://logowik.com/content/uploads/images/visa-payment-card1873.jpg",
+        "organization": "DBBL Credit Card",
+        "amount": 4500,
+        "due_date": "2025-04-10T18:00:00.000Z"
+    },
+    {
+        "id": 6,
+        "bill_type": "tuition",
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnrOlX4ZhnK9jFkNoQsARmliLFUR4JfN4u4g&s",
+        "organization": "Dhaka University",
+        "amount": 8000,
+        "due_date": "2025-04-15T12:00:00.000Z"
+    }
+]
