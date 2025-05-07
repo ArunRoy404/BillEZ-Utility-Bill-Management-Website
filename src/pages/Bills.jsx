@@ -1,10 +1,20 @@
 import React from 'react';
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useNavigation } from 'react-router';
 import BillCard from '../components/BillCard/BillCard';
+import LoaderRing from '../components/LoaderRing';
 
 const Bills = () => {
 
     const bills = useLoaderData()
+    const navigation = useNavigation();
+
+    if (navigation.state === 'loading') {
+        return (
+            <div className="h-[80vh] flex items-center justify-center">
+                <LoaderRing />
+            </div>
+        );
+    }
 
     return (
         <div className='my-20'>

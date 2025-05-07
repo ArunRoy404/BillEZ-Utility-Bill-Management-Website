@@ -17,16 +17,18 @@ const router = createBrowserRouter([
             },
             {
                 path: '/bills',
-                loader: ()=> fetch('../bills.json') ,
-                hydrateFallbackElement: <div className="h-[80vh] flex items-center justify-center"><LoaderRing></LoaderRing></div>,
                 Component: Bills,
+                loader: () => fetch('../bills.json'),
+                hydrateFallbackElement: <div className="h-[80vh] flex items-center justify-center"><LoaderRing></LoaderRing></div>
             },
             {
-                path: '/bills/:bill-id',
-                Component: BillDetails
+                path: '/bills/:bill_id',
+                Component: BillDetails,
+                loader: () => fetch('../bills.json'),
+                hydrateFallbackElement: <div className="h-[80vh] flex items-center justify-center"><LoaderRing></LoaderRing></div>
             },
             {
-                path: '/my-profile',
+                path: '/my_profile',
                 element: <h1>profile</h1>
             }
         ],

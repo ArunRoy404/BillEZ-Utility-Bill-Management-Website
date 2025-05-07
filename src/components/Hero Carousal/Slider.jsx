@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import { Autoplay, EffectFade, Pagination, EffectCreative } from 'swiper/modules';
 import SliderBanner from './SliderBanner';
 
-const carousalDataPromise = fetch('carousal.json').then(res => res.json())
+const carousalDataPromise = fetch('../carousal.json').then(res => res.json())
 
 const Slider = () => {
     const carousalData = use(carousalDataPromise)

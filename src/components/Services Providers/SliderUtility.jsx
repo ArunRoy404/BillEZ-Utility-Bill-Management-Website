@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import { Autoplay, FreeMode, Keyboard, Navigation, Pagination } from 'swiper/modules';
 import UtilityCard from './UtilityCard';
 
-const utilitiesPromise = fetch('utilityProviders.json').then(res=> res.json())
+const utilitiesPromise = fetch('../utilityProviders.json').then(res=> res.json())
 
 const SliderUtility = () => {
 
