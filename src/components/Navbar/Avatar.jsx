@@ -4,9 +4,7 @@ import { Link } from 'react-router';
 
 const Avatar = () => {
     const { user, logOut } = use(AuthContext)
-
     const { photoURL, balance } = user
-    console.log(balance);
 
     const handleLogOut = () => {
         logOut()

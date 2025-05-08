@@ -1,12 +1,11 @@
-import React, { use } from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
 import Avatar from './Avatar';
 import AuthContext from '../../context/AuthContext/AuthContext';
 
 const Navbar = () => {
 
-    const { user } = use(AuthContext)
-    const { balance } = user
+    const { user, balance } = useContext(AuthContext)
 
     const links = (
         <>
@@ -18,7 +17,7 @@ const Navbar = () => {
 
     const userOptions = (
         <div className='flex items-center gap-4'>
-            <p className='text-sm font-bold border-2 border-gray-400 bg-gray-200 px-4 py-2 rounded-3xl' >Current balance: {balance}</p>
+            {user && <p className='text-sm font-bold border-2 border-gray-400 bg-gray-200 px-4 py-2 rounded-3xl' >Current balance: {balance}</p>}
             <Avatar></Avatar>
         </div>
     )

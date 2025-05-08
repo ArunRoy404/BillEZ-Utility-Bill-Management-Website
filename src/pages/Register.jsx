@@ -42,7 +42,11 @@ const Register = () => {
             setISBtnLoading(true)
             createUser(email, password)
                 .then(() => {
-                    updateUserProfile(userName, photoURL)
+                    const updateInfo = {
+                        displayName: userName,
+                        photoURL: photoURL
+                    }
+                    updateUserProfile(updateInfo)
                         .then(() => {
                             setSuccess('Account created successfully')
                             notifySuccess("Account created successfully")

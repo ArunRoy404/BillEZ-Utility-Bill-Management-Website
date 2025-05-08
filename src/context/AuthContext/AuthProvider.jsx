@@ -5,6 +5,7 @@ import { auth } from '../../firebase/firebase.config';
 
 const AuthProvider = ({ children }) => {
 
+    const [balance, setBalance] = useState(10000)
     const [user, setUser] = useState(null)
     const [isLoading, setIsLoading] = useState(true)
 
@@ -20,8 +21,13 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    const updateUserProfile = (userName, photoURL) =>{
-        return updateProfile(auth.currentUser, {displayName: userName, photoURL: photoURL})
+    const updateUserProfile = (updateInfo) =>{
+        return updateProfile(auth.currentUser, updateInfo)
+    }
+
+    const reloadUser = async() =>{
+        await auth.currentUser.reload()
+        setUser({...auth.currentUser})
     }
 
     const googleLogIn = () => {
@@ -37,8 +43,7 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             if (currentUser) {
-                currentUser.balance = 10000
-                setUser(currentUser)
+                setUser({...currentUser})
             } else {
                 setUser(null)
             }
@@ -56,8 +61,11 @@ const AuthProvider = ({ children }) => {
         googleLogIn,
         createUser,
         updateUserProfile,
+        reloadUser,
         logIn,
-        logOut
+        logOut,
+        balance,
+        setBalance
     }
 
 

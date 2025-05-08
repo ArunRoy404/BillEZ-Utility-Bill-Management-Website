@@ -7,6 +7,7 @@ import BillDetails from "../components/BillCard/BillDetails";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ForgotPassword from "../pages/ForgotPassword";
+import Profile from "../pages/Profile";
 
 
 const router = createBrowserRouter([
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/my-profile',
-                element: <h1>profile</h1>
+                Component: Profile
             },
             {
                 path: '/login',
