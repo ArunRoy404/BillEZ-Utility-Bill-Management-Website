@@ -28,7 +28,7 @@ export default function DropDown({ bills, handleLoadTypes }) {
             <Listbox value={selected} onChange={setSelected} __demoMode>
                 <ListboxButton
                     className={clsx(
-                        'relative block w-full rounded-lg bg-gray-900 py-1.5 pr-8 pl-3 text-left text-sm/6 text-white',
+                        'relative block w-full rounded-lg bg-gray-700 py-1.5 pr-8 pl-3 text-left text-sm/6 text-white',
                         'focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25'
                     )}
                 >

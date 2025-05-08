@@ -38,7 +38,7 @@ const Bills = () => {
             <h2 className='text-center text-lg font-bold opacity-70 mb-10'>Track pending bills and make payments with just a few clicks.</h2>
             
             <div className='relative'>
-                <div className='sticky top-0 flex justify-end'>
+                <div className='flex justify-end'>
                     <div className='max-w-max mb-10'>
                         <h2 className='text-2xl font-bold mb-2'>Select Bill Type</h2>
                         <DropDown bills={bills} handleLoadTypes={handleLoadTypes}></DropDown>

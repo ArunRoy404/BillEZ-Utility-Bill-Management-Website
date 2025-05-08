@@ -4,6 +4,9 @@ import Home from "../pages/Home";
 import Bills from "../pages/Bills";
 import LoaderRing from "../components/LoaderRing";
 import BillDetails from "../components/BillCard/BillDetails";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import ForgotPassword from "../pages/ForgotPassword";
 
 
 const router = createBrowserRouter([
@@ -30,6 +33,18 @@ const router = createBrowserRouter([
             {
                 path: '/my-profile',
                 element: <h1>profile</h1>
+            },
+            {
+                path: '/login',
+                Component: Login
+            },
+            {
+                path: '/register',
+                Component: Register
+            },
+            {
+                path: '/forgot-password',
+                Component: ForgotPassword
             }
         ],
         errorElement: <h1>error</h1>
