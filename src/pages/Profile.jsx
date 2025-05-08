@@ -24,7 +24,7 @@ const Profile = () => {
 
         updateUserProfile(updateInfo)
         .then(()=>{reloadUser()})
-        .catch(error=>{console.log(error.message);})
+        .catch(error=>{console.log(error.code);})
 
     }
 

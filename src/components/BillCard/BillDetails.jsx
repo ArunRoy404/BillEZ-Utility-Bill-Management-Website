@@ -14,8 +14,6 @@ const BillDetails = () => {
 
     const navigate = useNavigate(null)
 
-
-
     if (isBillsLoading) {
         return <div className="h-[80vh] flex items-center justify-center"><LoaderRing></LoaderRing></div>
     }

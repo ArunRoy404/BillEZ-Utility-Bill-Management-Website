@@ -1,10 +1,21 @@
 import toast from 'react-hot-toast'
-const notifySuccess = (message) =>{
+const notifySuccess = (message) => {
     toast.success(message)
 }
 
-const notifyError = (message) =>{
+const notifyError = (message) => {
     toast.error(message)
 }
 
-export {notifySuccess, notifyError}
+const notifyWarn = (message) => {
+    toast(message, {
+        icon: '⚠️',
+        style: {
+            border: '1px solid #facc15',
+            color: '#92400e',
+        },
+    });
+};
+
+
+export { notifySuccess, notifyError, notifyWarn } 

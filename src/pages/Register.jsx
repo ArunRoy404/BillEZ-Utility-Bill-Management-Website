@@ -1,5 +1,5 @@
 import React, { use, useState } from 'react';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import AuthContext from '../context/AuthContext/AuthContext';
@@ -16,6 +16,8 @@ const Register = () => {
 
 
     const navigate = useNavigate()
+    const location = useLocation()
+    console.log(location);
 
     const handleCreateUser = e => {
         e.preventDefault()
@@ -51,7 +53,7 @@ const Register = () => {
                             setSuccess('Account created successfully')
                             notifySuccess("Account created successfully")
                             reloadUser()
-                            navigate('/')
+                            navigate(location.state || '/')
                         })
                         .catch(error => {
                             setError(error.code)
@@ -114,7 +116,7 @@ const Register = () => {
                                     Register
                                 </button>
                             </form>
-                            <h2>Already have an account? <Link className='underline text-blue-400' to={'/login'}>Log IN Now</Link></h2>
+                            <h2>Already have an account? <Link state={location.state} className='underline text-blue-400' to={'/login'}>Log IN Now</Link></h2>
                         </div>
                     </div>
                 </div>

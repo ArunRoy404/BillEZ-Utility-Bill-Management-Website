@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useLocation } from 'react-router';
 import Avatar from './Avatar';
 import AuthContext from '../../context/AuthContext/AuthContext';
 
 const Navbar = () => {
 
     const { user, balance } = useContext(AuthContext)
+    const location = useLocation()
 
     const links = (
         <>
@@ -24,8 +25,8 @@ const Navbar = () => {
 
     const loginOptions = (
         <div className='space-x-4 font-bold'>
-            <Link to={'register'} className='text-sm' >Register</Link>
-            <Link to={'/login'} className='btn btn-neutral shadow-none rounded-4xl hover:bg-white hover:text-black border-2 border-black '>Login</Link>
+            <Link state={location.state} to={'register'} className='text-sm' >Register</Link>
+            <Link state={location.state} to={'/login'} className='btn btn-neutral shadow-none rounded-4xl hover:bg-white hover:text-black border-2 border-black '>Login</Link>
         </div>
     )
 

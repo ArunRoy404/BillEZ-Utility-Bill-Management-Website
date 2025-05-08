@@ -8,6 +8,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ForgotPassword from "../pages/ForgotPassword";
 import Profile from "../pages/Profile";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -21,17 +22,15 @@ const router = createBrowserRouter([
             },
             {
                 path: '/bills',
-                Component: Bills
+                element: <PrivateRoute><Bills></Bills></PrivateRoute>
             },
             {
                 path: '/bills/:bill_id',
-                Component: BillDetails,
-                loader: () => fetch('../bills.json'),
-                hydrateFallbackElement: <div className="h-[80vh] flex items-center justify-center"><LoaderRing></LoaderRing></div>
+                Component: BillDetails
             },
             {
                 path: '/my-profile',
-                Component: Profile
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
             },
             {
                 path: '/login',
