@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import AuthContext from '../context/AuthContext/AuthContext';
 import LoaderRing from '../components/LoaderRing';
 import { FaPenToSquare } from "react-icons/fa6";
+import { ImCross } from "react-icons/im";
 
 const Profile = () => {
     const [isEdit, setIsEdit] = useState(false)
@@ -59,7 +60,11 @@ const Profile = () => {
             </div>
 
             <button onClick={() => setIsEdit(state => !state)} className='mb-10 btn btn-neutral bg-blue-400 shadow-none rounded-4xl hover:bg-white hover:text-blue-400 border-2 border-blue-400 '>
-                <span><FaPenToSquare /></span>
+                {
+                    isEdit
+                    ? <span><ImCross /></span>
+                    : <span><FaPenToSquare /></span>
+                }
                 {
                     isEdit
                         ? 'Cancel edit'

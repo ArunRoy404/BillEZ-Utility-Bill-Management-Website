@@ -7,7 +7,7 @@ import { notifyError, notifySuccess } from '../utilities/notify';
 
 
 const Register = () => {
-    const { createUser, updateUserProfile } = use(AuthContext)
+    const { createUser, updateUserProfile, reloadUser } = use(AuthContext)
 
     const [success, setSuccess] = useState('')
     const [error, setError] = useState('')
@@ -50,6 +50,7 @@ const Register = () => {
                         .then(() => {
                             setSuccess('Account created successfully')
                             notifySuccess("Account created successfully")
+                            reloadUser()
                             navigate('/')
                         })
                         .catch(error => {

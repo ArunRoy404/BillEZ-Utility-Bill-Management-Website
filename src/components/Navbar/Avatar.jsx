@@ -1,10 +1,11 @@
-import React, { use } from 'react';
+import React, { useContext } from 'react';
 import AuthContext from '../../context/AuthContext/AuthContext';
 import { Link } from 'react-router';
 
 const Avatar = () => {
-    const { user, logOut } = use(AuthContext)
-    const { photoURL, balance } = user
+    const { user, logOut ,balance } = useContext(AuthContext)
+    const { photoURL } = user
+
 
     const handleLogOut = () => {
         logOut()

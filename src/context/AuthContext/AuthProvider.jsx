@@ -28,6 +28,7 @@ const AuthProvider = ({ children }) => {
     const reloadUser = async() =>{
         await auth.currentUser.reload()
         setUser({...auth.currentUser})
+        console.log('sda')
     }
 
     const googleLogIn = () => {
@@ -43,6 +44,7 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             if (currentUser) {
+                setBalance(10000)
                 setUser({...currentUser})
             } else {
                 setUser(null)

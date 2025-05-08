@@ -9,7 +9,7 @@ import { notifyError, notifySuccess } from '../utilities/notify';
 
 const Login = () => {
 
-    const { logIn, googleLogIn } = use(AuthContext)
+    const { logIn, googleLogIn, reloadUser } = use(AuthContext)
 
     const [success, setSuccess] = useState('')
     const [error, setError] = useState('')
@@ -30,10 +30,10 @@ const Login = () => {
         setIsLogInBtnLoading(true)
 
         logIn(email, password)
-            .then(result => {
-                console.log(result)
+            .then(() => {
                 setSuccess('Login Successful')
                 notifySuccess('Login Successful')
+                reloadUser()
                 navigate('/')
             })
             .catch(error => {
@@ -55,6 +55,7 @@ const Login = () => {
                 console.log(result)
                 setSuccess('Login Successful')
                 notifySuccess('Login Successful')
+                reloadUser()
                 navigate(location.state || '/')
             })
             .catch(error => {

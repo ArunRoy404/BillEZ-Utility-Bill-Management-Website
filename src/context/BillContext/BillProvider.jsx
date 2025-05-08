@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import BillContext from './BillContext';
+import AuthContext from '../AuthContext/AuthContext';
 
 const BillProvider = ({ children }) => {
 
     const [bills, setBills] = useState([])
     const [isBillsLoading, setIsBillsLoading] = useState(false)
+
+    const {user} = useContext(AuthContext)
 
     useEffect(() => {
         setIsBillsLoading(true)
@@ -14,7 +17,8 @@ const BillProvider = ({ children }) => {
             .finally(()=>{
                 setIsBillsLoading(false)
             })
-    }, [])
+    }, [user])
+
 
     const setStatusPaid = (id) =>{
         const paidBill = bills.find(bill=> bill.id == id)
