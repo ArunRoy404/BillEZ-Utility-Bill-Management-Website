@@ -52,7 +52,7 @@ const Profile = () => {
     )
 
     return (
-        <div className='bg-gray-900 text-white flex flex-col items-center p-10 rounded-2xl' >
+        <div className='mb-20 bg-gray-900 text-white flex flex-col items-center p-10 rounded-2xl' >
             <div className='text-center'>
                 <img className='w-40 h-40 rounded-full p-2 bg-white mb-5' src={user?.photoURL} alt="" />
                 <h1 className='text-3xl font-bold mb-2'>{user?.displayName}</h1>

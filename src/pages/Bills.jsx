@@ -22,6 +22,7 @@ const Bills = () => {
         setCatBills(bills)
     }, [bills])
 
+    
     if (isBillsLoading) {
         return (
             <div className="h-[80vh] flex items-center justify-center">

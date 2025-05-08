@@ -8,11 +8,14 @@ import { notifySuccess } from '../../utilities/notify';
 import BillContext from '../../context/BillContext/BillContext';
 
 const BillDetails = () => {
+    
     const { setBalance } = useContext(AuthContext)
     const {bills, isBillsLoading, setStatusPaid} = useContext(BillContext)
     const { bill_id } = useParams();
 
     const navigate = useNavigate(null)
+
+    
 
     if (isBillsLoading) {
         return <div className="h-[80vh] flex items-center justify-center"><LoaderRing></LoaderRing></div>
@@ -34,7 +37,7 @@ const BillDetails = () => {
     
     return (
         <div>
-            <div className="flex flex-col sm:flex-row gap-10 md:gap-15 lg:gap-20 border-2 bg-gray-600 text-white border-gray-300 rounded-xl shadow-xl py-8 px-20 hover:shadow-md transition-shadow max-w-max mx-auto">
+            <div className="mb-20 flex flex-col sm:flex-row gap-10 md:gap-15 lg:gap-20 border-2 bg-gray-600 text-white border-gray-300 rounded-xl shadow-xl py-8 px-20 hover:shadow-md transition-shadow max-w-max mx-auto">
                 <div className="relative flex items-center shadow-lg rounded-2xl overflow-hidden max-w-max mx-auto">
                     <img
                         src={currentBill.imageURL}
