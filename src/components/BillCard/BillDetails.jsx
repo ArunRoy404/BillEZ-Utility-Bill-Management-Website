@@ -1,40 +1,69 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router'
 import LoaderRing from '../LoaderRing';
 import BillTypeIcon from './BillTypeIcon';
 import { format } from 'date-fns';
 import AuthContext from '../../context/AuthContext/AuthContext';
-import { notifySuccess } from '../../utilities/notify';
+import { notifyError, notifySuccess } from '../../utilities/notify';
 import BillContext from '../../context/BillContext/BillContext';
 
 const BillDetails = () => {
-    
-    const { setBalance } = useContext(AuthContext)
-    const {bills, isBillsLoading, setStatusPaid} = useContext(BillContext)
-    const { bill_id } = useParams();
+
+    const [loadedBills, setLoadedBills] = useState([])
+    const [currentBill, setCurrentBill] = useState(null)
+    const [billDueDate, setBillDueDate] = useState(null)
 
     const navigate = useNavigate(null)
+    const { bill_id } = useParams();
 
-    
+    const { setBalance, isLoading, balance } = useContext(AuthContext)
+    const { bills, isBillsLoading, setStatusPaid } = useContext(BillContext)
 
-    if (isBillsLoading) {
+
+    const handlePayBill = () => {
+        if (balance >= currentBill.amount) {
+            setBalance(balance=> balance-currentBill.amount)
+            setStatusPaid(currentBill.id)
+            notifySuccess('Bill payed successfully')
+            navigate('/bills')
+        }else{
+            notifyError("Not enough Balance")
+        }
+    }
+
+
+    useEffect(() => {
+        setLoadedBills(bills)
+    }, [bills])
+
+    useEffect(() => {
+        if (loadedBills.length > 0) {
+            const bill = loadedBills.find(bill => bill.id == bill_id)
+            if (bill) {
+                setCurrentBill(bill)
+                const formattedDate = format(new Date(bill.due_date), 'dd MMM, yyyy')
+                setBillDueDate(formattedDate)
+            }
+        }
+    }, [loadedBills, bill_id])
+
+
+
+    if (isBillsLoading || isLoading) {
         return <div className="h-[80vh] flex items-center justify-center"><LoaderRing></LoaderRing></div>
     }
 
-    const currentBill = bills.find(bill => bill.id == bill_id)
-    const formattedDate = format(new Date(currentBill.due_date), 'dd MMM, yyyy')
+    const notBillFound = (
+        <div className='text-center font-bold mt-10'>
+            <h1 className='text-4xl'>No bill found</h1>
+            <p className='text-lg opacity-70'>What are you searching?</p>
+        </div>
+    )
 
-    
-
-    
-    const handlePayBill = () => {
-        setBalance(balance => balance - currentBill.amount)
-        setStatusPaid(currentBill.id)
-        notifySuccess('Bill payed successfully')
-        navigate('/bills')
+    if (!currentBill) {
+        return notBillFound
     }
 
-    
     return (
         <div>
             <div className="mb-20 flex flex-col sm:flex-row gap-10 md:gap-15 lg:gap-20 border-2 bg-gray-600 text-white border-gray-300 rounded-xl shadow-xl py-8 px-20 hover:shadow-md transition-shadow max-w-max mx-auto">
@@ -57,7 +86,7 @@ const BillDetails = () => {
 
                         <div className="mt-3 mb-2 ">
                             <p className=" font-bold opacity-70 capitalize">{currentBill.billType}</p>
-                            <p>Due: <strong>{formattedDate}</strong></p>
+                            <p>Due: <strong>{billDueDate}</strong></p>
                         </div>
                     </div>
 
@@ -67,7 +96,11 @@ const BillDetails = () => {
                             Amount: <span className="md:text-xl font-bold text-blue-400">BDT {currentBill.amount}</span>
                         </div>
 
-                        <button onClick={handlePayBill} className='text-lg px-10 btn btn-neutral shadow-none rounded-xl hover:bg-white hover:text-black border-2 border-black '>Pay Bill</button>
+                        {
+                            currentBill.status == 'paid'
+                                ? <p className='text-lg text-green-400 font-bold'>Bill paid</p>
+                                : <button onClick={handlePayBill} className='text-lg px-10 btn btn-neutral shadow-none rounded-xl hover:bg-white hover:text-black border-2 border-black '>Pay Bill</button>
+                        }
                     </div>
                 </div>
             </div>

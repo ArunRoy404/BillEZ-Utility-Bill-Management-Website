@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/bills/:bill_id',
-                Component: BillDetails
+                element: <PrivateRoute><BillDetails></BillDetails></PrivateRoute>
             },
             {
                 path: '/my-profile',

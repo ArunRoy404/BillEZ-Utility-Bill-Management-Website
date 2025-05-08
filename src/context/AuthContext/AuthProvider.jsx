@@ -22,11 +22,13 @@ const AuthProvider = ({ children }) => {
     }
 
     const updateUserProfile = (updateInfo) =>{
+
         return updateProfile(auth.currentUser, updateInfo)
     }
 
     const reloadUser = async() =>{
-        await auth.currentUser.reload()
+        setIsLoading(true)
+        await auth.currentUser.reload().then(()=>{setIsLoading(false)})
         setUser({...auth.currentUser})
         console.log('sda')
     }
@@ -39,7 +41,7 @@ const AuthProvider = ({ children }) => {
     const logOut = () => {
         setIsLoading(true)
         return signOut(auth)
-    }
+    } 
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {

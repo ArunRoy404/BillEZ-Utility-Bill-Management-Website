@@ -31,7 +31,7 @@ const Navbar = () => {
     )
 
     return (
-        <div className="shadow-sm rounded-xl mb-8">
+        <div className="shadow-sm rounded-xl mb-8 z-100">
             <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">

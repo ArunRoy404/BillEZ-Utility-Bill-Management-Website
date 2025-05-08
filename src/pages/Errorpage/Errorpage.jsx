@@ -21,8 +21,7 @@ const Errorpage = () => {
                                             Look like you're lost
                                         </h3>
 
-                                        <p>the page you are looking for not avaible!</p>
-
+                                        <p>the page you are looking for not available!</p>
                                         <NavLink to={'/'} className={'link_404'}>Back to home</NavLink>
                                     </div>
                                 </div>

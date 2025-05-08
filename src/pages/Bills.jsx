@@ -6,15 +6,14 @@ import BillContext from '../context/BillContext/BillContext';
 
 const Bills = () => {
     const [catBills, setCatBills] = useState([])
+    const { bills } = useContext(BillContext)
 
-    const { bills, isBillsLoading } = useContext(BillContext)
 
-
-    const handleLoadTypes = (type)=>{
-        if(type=='Select all'){
+    const handleLoadTypes = (type) => {
+        if (type == 'Select all') {
             setCatBills(bills)
-        }else{
-            setCatBills(bills.filter(bill=>bill.billType==type))
+        } else {
+            setCatBills(bills.filter(bill => bill.billType == type))
         }
     }
 
@@ -22,20 +21,13 @@ const Bills = () => {
         setCatBills(bills)
     }, [bills])
 
-    
-    if (isBillsLoading) {
-        return (
-            <div className="h-[80vh] flex items-center justify-center">
-                <LoaderRing />
-            </div>
-        );
-    }
+
 
     return (
         <div className='my-20'>
             <h1 className='text-center text-4xl font-bold'>Your Bill Dashboard</h1>
             <h2 className='text-center text-lg font-bold opacity-70 mb-10'>Track pending bills and make payments with just a few clicks.</h2>
-            
+
             <div className='relative'>
                 <div className='flex justify-end'>
                     <div className='max-w-max mb-10'>

@@ -52,8 +52,7 @@ const Login = () => {
         setIsGoogleBtnLoading(true)
 
         googleLogIn()
-            .then(result => {
-                console.log(result)
+            .then(()=> {
                 setSuccess('Login Successful')
                 notifySuccess('Login Successful')
                 reloadUser()
@@ -70,17 +69,18 @@ const Login = () => {
 
 
     return (
-        <div className='flex md:flex md:py-10'>
+        <div className='flex md:py-10'>
             <div className="flex flex-col md:flex-row flex-1 items-center justify-around mb-10 ">
                 <div className='hidden md:block'>
                     <h1 className='text-6xl font-bold mb-3' >BillEZ</h1>
                     <h2 className='md:text-3xl font-bold opacity-70'>Fast. Secure. Hassle-Free</h2>
                 </div>
-                <div className="w-full">
+                <div className="w-full md:w-auto">
                     <div className="card bg-base-100 md:w-sm shrink-0 shadow-2xl border-2 border-gray-300 ">
                         <div className="card-body">
                             <h1 className='text-4xl font-bold mb-3'>Log In</h1>
                             <form onSubmit={handleLogin} className="fieldset border-b-2 border-gray-400 border-dashed">
+
                                 <label className="label text-lg font-black text-blue-400">Email</label>
                                 <input name='email' type="email" required className="w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Email" />
 
