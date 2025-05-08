@@ -19,7 +19,7 @@ const BillDetails = () => {
     const { bill_id } = useParams();
 
     const { setBalance, isLoading, balance } = useContext(AuthContext)
-    const { bills, isBillsLoading, setStatusPaid, navRef } = useContext(BillContext)
+    const { bills, isBillsLoading, setStatusPaid, bodyRef } = useContext(BillContext)
 
 
     const handlePayBill = () => {
@@ -51,9 +51,9 @@ const BillDetails = () => {
 
     useEffect(() => {
         if (currentBill) {
-            navRef.current.scrollIntoView()
+            bodyRef.current.scrollIntoView()
         }
-    }, [currentBill, navRef])
+    }, [currentBill, bodyRef])
 
 
     if (isBillsLoading || isLoading) {
@@ -73,7 +73,7 @@ const BillDetails = () => {
 
     return (
         <div>
-            <h1 className='opacity-70 px-2 text-lg md:text-3xl font-bold mb-5 md:mb-10'>Available balance: <span className={`${balance >= currentBill.amount ? 'text-green-600' : 'text-red-300'}`}>{balance}</span> BDT</h1>
+            <h1 className='md:hidden opacity-70 px-2 text-lg md:text-3xl font-bold mb-5'>Available balance: <span className={`${balance >= currentBill.amount ? 'text-green-600' : 'text-red-300'}`}>{balance}</span> BDT</h1>
             <div className="mb-20 flex flex-col sm:flex-row gap-10 md:gap-15 lg:gap-20 border-2 bg-gray-900 text-white border-gray-300 rounded-xl shadow-xl py-8 px-20 hover:shadow-md transition-shadow max-w-max mx-auto">
                 <div className="relative flex items-center shadow-lg rounded-2xl overflow-hidden max-w-max mx-auto">
                     <img

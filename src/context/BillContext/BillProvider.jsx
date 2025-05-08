@@ -6,7 +6,7 @@ const BillProvider = ({ children }) => {
 
     const [bills, setBills] = useState([])
     const [isBillsLoading, setIsBillsLoading] = useState(false)
-    const [navRef, setNavRef] = useState(null)
+    const [bodyRef, setBodyRef] = useState(null)
 
     useEffect(() => {
         setIsBillsLoading(true)
@@ -32,8 +32,8 @@ const BillProvider = ({ children }) => {
         bills,
         isBillsLoading,
         setStatusPaid,
-        navRef,
-        setNavRef
+        bodyRef,
+        setBodyRef
     }
 
     return (

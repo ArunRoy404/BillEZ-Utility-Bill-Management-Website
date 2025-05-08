@@ -2,22 +2,12 @@ import React, { useContext } from 'react';
 import { Link, NavLink, useLocation } from 'react-router';
 import Avatar from './Avatar';
 import AuthContext from '../../context/AuthContext/AuthContext';
-import BillContext from '../../context/BillContext/BillContext';
-import { useRef } from 'react';
-import { useEffect } from 'react';
+
 
 const Navbar = () => {
 
     const { user, balance } = useContext(AuthContext)
-    const {setNavRef} = useContext(BillContext)
-
     const location = useLocation()
-
-    const navRef = useRef(null)
-
-    useEffect(()=>{
-        setNavRef(navRef)
-    },[setNavRef])
 
     const links = (
         <>
@@ -42,7 +32,7 @@ const Navbar = () => {
     )
 
     return (
-        <div ref={navRef} className="shadow-sm rounded-xl mb-8 z-100">
+        <div className="shadow-sm rounded-xl mb-8 z-100">
             <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
