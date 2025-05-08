@@ -32,7 +32,7 @@ const WhyChooseUs = () => {
 
 
     return (
-        <section className="md:py-16">
+        <section className="md:py-16 mt-20">
             <div className="text-center mx-auto px-6">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                     Why Choose BillEZ?
@@ -41,7 +41,7 @@ const WhyChooseUs = () => {
                     A smarter way to manage utility bills — simple, secure, and stress-free.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6">
                     {features.map((feature, index) => <Features key={index} feature={feature}></Features>)}
                 </div>
             </div>

@@ -6,11 +6,11 @@ const Review = ({ testimonial }) => {
     const { name, location, image, rating, content } = testimonial
     return (
         <div className="border border-gray-200 p-8 rounded-xl shadow-md bg-white text-gray-800">
-            <div className="space-y-6">
+            <div className="md:space-y-6">
 
                 <div className="text-4xl text-gray-400">“</div>
 
-                <p className="text-lg leading-relaxed">
+                <p className="text-sm md:text-lg leading-relaxed">
                     {content}
                 </p>
 
@@ -26,7 +26,7 @@ const Review = ({ testimonial }) => {
                     </div>
                 </div>
 
-                <div className="flex items-center justify-between pt-2">
+                <div className="flex flex-col md:flex-row items-center justify-between pt-2">
                     <Rating rating={rating}></Rating>
                     <p className="text-sm text-gray-500">{rating} out of 5 stars</p>
                 </div>

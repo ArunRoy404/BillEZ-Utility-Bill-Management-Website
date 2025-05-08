@@ -8,7 +8,6 @@ const Bills = () => {
     const [catBills, setCatBills] = useState([])
     const { bills } = useContext(BillContext)
 
-
     const handleLoadTypes = (type) => {
         if (type == 'Select all') {
             setCatBills(bills)
@@ -36,7 +35,7 @@ const Bills = () => {
                     </div>
                 </div>
 
-                <div className='space-y-10 sm:grid grid-cols-1 flex-1'>
+                <div className='space-y-3 md:space-y-10 sm:grid grid-cols-1 flex-1'>
                     {
                         catBills.map(bill => <BillCard key={bill.id} bill={bill}></BillCard>)
                     }
