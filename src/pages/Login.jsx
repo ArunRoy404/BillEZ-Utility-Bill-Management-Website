@@ -72,11 +72,11 @@ const Login = () => {
                             <h1 className='text-4xl font-bold mb-3'>Log In</h1>
                             <form onSubmit={handleLogin} className="fieldset border-b-2 border-gray-400 border-dashed">
                                 <label className="label text-lg font-black text-blue-400">Email</label>
-                                <input name='email' type="email" required className="focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Email" />
+                                <input name='email' type="email" required className="w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Email" />
 
                                 <label className="label font-bold text-lg text-blue-400">Password</label>
                                 <div className='relative'>
-                                    <input name='password' required type={isPassVisible ? 'text' : "password"} className="focus:outline-none focus:border-2  focus:border-blue-400 input pr-13 font-bold" placeholder="******" />
+                                    <input name='password' required type={isPassVisible ? 'text' : "password"} className="w-full focus:outline-none focus:border-2  focus:border-blue-400 input pr-13 font-bold" placeholder="******" />
                                     <button type='button' onClick={() => setIsPassVisible(value => !value)} className='cursor-pointer p-0 h-6 w-4 absolute right-6 top-2 z-10 border-none'>
                                         {
                                             isPassVisible
