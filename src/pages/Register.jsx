@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router';
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import AuthContext from '../context/AuthContext/AuthContext';
+import { notifyError, notifySuccess } from '../utilities/notify';
 
 
 const Register = () => {
@@ -44,13 +45,18 @@ const Register = () => {
                     updateUserProfile(userName, photoURL)
                         .then(() => {
                             setSuccess('Account created successfully')
+                            notifySuccess("Account created successfully")
                             navigate('/')
                         })
                         .catch(error => {
                             setError(error.code)
+                            notifyError('Registration failed')
                         })
                 })
-                .catch(error => setError(error.code))
+                .catch(error => {
+                    setError(error.code)
+                    notifyError('Registration failed')
+                })
                 .finally(() => {
                     setISBtnLoading(false)
                 })

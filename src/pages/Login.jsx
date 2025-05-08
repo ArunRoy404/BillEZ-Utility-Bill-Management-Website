@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router';
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import AuthContext from '../context/AuthContext/AuthContext';
+import { notifyError, notifySuccess } from '../utilities/notify';
 
 
 
@@ -32,9 +33,13 @@ const Login = () => {
             .then(result => {
                 console.log(result)
                 setSuccess('Login Successful')
+                notifySuccess('Login Successful')
                 navigate('/')
             })
-            .catch(error => setError(error.message))
+            .catch(error => {
+                setError(error.code)
+                notifyError('Login Failed')
+            })
             .finally(() => {
                 setIsLogInBtnLoading(false)
             })
@@ -49,13 +54,16 @@ const Login = () => {
             .then(result => {
                 console.log(result)
                 setSuccess('Login Successful')
+                notifySuccess('Login Successful')
                 navigate(location.state || '/')
             })
-            .catch(error => setError(error.code))
+            .catch(error => {
+                setError(error.code)
+                notifyError("Login failed!")
+            })
             .finally(() => {
                 setIsGoogleBtnLoading(false)
             })
-
     }
 
 
