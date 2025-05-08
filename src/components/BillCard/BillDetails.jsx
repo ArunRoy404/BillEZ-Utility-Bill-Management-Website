@@ -31,7 +31,6 @@ const BillDetails = () => {
         }
     }
 
-
     useEffect(() => {
         setLoadedBills(bills)
     }, [bills])
