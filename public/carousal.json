@@ -13,7 +13,7 @@
       "title": "Trusted by Leading Utility Providers",
       "subtitle": "We work with top organizations across Bangladesh",
       "ctaText": "View All Partners",
-      "ctaLink": "/partners",
+      "ctaLink": "/",
       "bgColor": "#2E7D32",
       "imgLink": "https://i.ibb.co.com/xKYRnrKz/image2.png"
     },
@@ -28,7 +28,7 @@
         { "icon": "📱", "text": "Mobile Friendly Interface" }
       ],
       "ctaText": "Learn More",
-      "ctaLink": "/about",
+      "ctaLink": "/",
       "bgColor": "#FF6D00",
       "imgLink": "https://i.ibb.co.com/C3VSPcDW/qs.png"
     },
@@ -42,7 +42,7 @@
         "avatar": "https://i.pravatar.cc/150?img=1"
       },
       "ctaText": "Read Reviews",
-      "ctaLink": "/testimonials",
+      "ctaLink": "/",
       "bgColor": "#00838F",
       "imgLink": "https://www.shutterstock.com/image-vector/heart-happy-face-icons-3d-600nw-2301196927.jpg"
     },
@@ -51,7 +51,7 @@
       "title": "Download the BillEZ App Today!",
       "subtitle": "Available on Android & iOS – Manage bills anytime, anywhere",
       "ctaText": "Explore Features",
-      "ctaLink": "/features",
+      "ctaLink": "/",
       "bgColor": "#AD1457",
       "imgLink": "https://thumbs.dreamstime.com/b/google-play-app-store-icons-google-play-app-store-icons-editable-vector-illustration-isolated-white-background-123024624.jpg?w=768"
 

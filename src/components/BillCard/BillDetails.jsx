@@ -8,6 +8,7 @@ import { notifyError, notifySuccess } from '../../utilities/notify';
 import BillContext from '../../context/BillContext/BillContext';
 import { MdPayment } from "react-icons/md";
 
+
 const BillDetails = () => {
 
     const [loadedBills, setLoadedBills] = useState([])
@@ -18,7 +19,7 @@ const BillDetails = () => {
     const { bill_id } = useParams();
 
     const { setBalance, isLoading, balance } = useContext(AuthContext)
-    const { bills, isBillsLoading, setStatusPaid } = useContext(BillContext)
+    const { bills, isBillsLoading, setStatusPaid, navRef } = useContext(BillContext)
 
 
     const handlePayBill = () => {
@@ -44,9 +45,15 @@ const BillDetails = () => {
                 const formattedDate = format(new Date(bill.due_date), 'dd MMM, yyyy')
                 setBillDueDate(formattedDate)
             }
+
         }
     }, [loadedBills, bill_id])
 
+    useEffect(() => {
+        if (currentBill) {
+            navRef.current.scrollIntoView()
+        }
+    }, [currentBill, navRef])
 
 
     if (isBillsLoading || isLoading) {
