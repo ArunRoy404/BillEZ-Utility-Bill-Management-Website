@@ -46,5 +46,13 @@
         "organization": "Dhaka University",
         "amount": 8000,
         "due_date": "2025-04-15T12:00:00.000Z"
+    },
+    {
+        "id": 7,
+        "billType": "electricity",
+        "imageURL": "https://play-lh.googleusercontent.com/6SONPi2ntkdffBNkxTLlmW8cw4XBcqUYbuNUJKSS4oLE3Au44FtfGK9ijDHjAh53lg",
+        "organization": "DESCO",
+        "amount": 2500,
+        "due_date": "2025-04-10T06:57:58.110Z"
     }
 ]

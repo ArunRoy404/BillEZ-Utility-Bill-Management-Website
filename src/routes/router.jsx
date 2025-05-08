@@ -28,7 +28,7 @@ const router = createBrowserRouter([
                 hydrateFallbackElement: <div className="h-[80vh] flex items-center justify-center"><LoaderRing></LoaderRing></div>
             },
             {
-                path: '/my_profile',
+                path: '/my-profile',
                 element: <h1>profile</h1>
             }
         ],
