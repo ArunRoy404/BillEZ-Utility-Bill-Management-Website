@@ -9,6 +9,7 @@ import Register from "../pages/Register";
 import ForgotPassword from "../pages/ForgotPassword";
 import Profile from "../pages/Profile";
 import PrivateRoute from "./PrivateRoute";
+import Errorpage from "../pages/Errorpage/Errorpage";
 
 
 const router = createBrowserRouter([
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
                 Component: ForgotPassword
             }
         ],
-        errorElement: <h1>error</h1>
+        errorElement: <Errorpage></Errorpage>
     },
 ]);
 
