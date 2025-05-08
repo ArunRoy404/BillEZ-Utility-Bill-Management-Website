@@ -38,7 +38,7 @@ const HowItWorks = () => {
                 Pay utility bills faster than ever — just follow these easy steps.
             </p>
             <div className="max-w-4xl mx-auto px-6 relative">
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-400"></div>
+                <div className="line absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-400"></div>
 
                 {steps.map((step, index) => <Step key={index} step={step} index={index}></Step>)}
 

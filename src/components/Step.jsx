@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Step = ({ step, index }) => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: false,
+        });
+    }, []);
+    
     return (
-        <div className={`mb-4 md:mb-8 flex items-center justify-between gap-10 w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+        <div data-aos={`${index%2==1 ? 'fade-right' : 'fade-left'}`} className={`mb-4 md:mb-8 flex items-center justify-between gap-10 w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
             <div
                 className="order-2 md:w-5/12 backdrop-blur-sm bg-gray-900 text-white p-3 md:p-6 rounded-lg shadow-xl"
             >

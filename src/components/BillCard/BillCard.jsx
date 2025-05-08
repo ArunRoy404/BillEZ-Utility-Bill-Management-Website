@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router';
 import { format } from "date-fns";
 import { FcOk } from "react-icons/fc";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const BillCard = ({ bill }) => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: false,
+        });
+    }, []);
+
     const formattedDate = format(new Date(bill.due_date), 'dd MMM, y')
 
     const payBtn = (
@@ -20,7 +30,7 @@ const BillCard = ({ bill }) => {
     )
 
     return (
-        <div className="flex flex-row gap-8 md:gap-15 lg:gap-20 bg-gray-900 text-white border border-gray-200 rounded-xl shadow-sm p-3 md:py-8 md:px-20 hover:shadow-md transition-shadow mx-auto">
+        <div data-aos='fade-left' className="flex flex-row gap-8 md:gap-15 lg:gap-20 bg-gray-900 text-white border border-gray-200 rounded-xl shadow-sm p-3 md:py-8 md:px-20 hover:shadow-md transition-shadow mx-auto">
             <div className="flex items-center md:border rounded-2xl overflow-hidden max-w-max mx-auto">
                 <img
                     src={bill.imageURL}

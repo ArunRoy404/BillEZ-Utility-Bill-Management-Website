@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6">
-                    {features.map((feature, index) => <Features key={index} feature={feature}></Features>)}
+                    {features.map((feature, index) => <Features key={index} index={index} feature={feature}></Features>)}
                 </div>
             </div>
         </section>

@@ -10,16 +10,32 @@
   font-family: "Roboto", sans-serif;
 }
 
-li a{
+li a {
   border-radius: 10px;
   margin-left: 10px;
 }
 
-header li .active{
+header li .active {
   background-color: white;
   color: blue
 }
 
 html {
   overflow-y: scroll;
+}
+
+@keyframes appear {
+  from {
+    height: 0%;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+.line {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 30% cover 90%;
 }
