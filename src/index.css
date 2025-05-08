@@ -20,3 +20,6 @@ header li .active{
   color: blue
 }
 
+html {
+  overflow-y: scroll;
+}

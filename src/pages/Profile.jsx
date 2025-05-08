@@ -3,6 +3,7 @@ import AuthContext from '../context/AuthContext/AuthContext';
 import LoaderRing from '../components/LoaderRing';
 import { FaPenToSquare } from "react-icons/fa6";
 import { ImCross } from "react-icons/im";
+import { notifyError, notifySuccess } from '../utilities/notify';
 
 const Profile = () => {
     const [isEdit, setIsEdit] = useState(false)
@@ -15,6 +16,7 @@ const Profile = () => {
         const photoURL = e.target.photoURL.value 
 
         if(!displayName && !photoURL){
+            notifyError("Nothing to update")
             return
         }
 
@@ -23,7 +25,10 @@ const Profile = () => {
         if(photoURL) updateInfo.photoURL = photoURL
 
         updateUserProfile(updateInfo)
-        .then(()=>{reloadUser()})
+        .then(()=>{
+            reloadUser()
+            notifySuccess("Profile updated successfully")
+        })
         .catch(error=>{console.log(error.code);})
 
     }
