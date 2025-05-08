@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { useLoaderData, useNavigation } from 'react-router';
+import React, { useContext, useEffect, useState } from 'react';
 import BillCard from '../components/BillCard/BillCard';
 import LoaderRing from '../components/LoaderRing';
 import DropDown from '../components/DropDown/DropDown';
+import BillContext from '../context/BillContext/BillContext';
 
 const Bills = () => {
-
-    const [bills, setBills] = useState([])
     const [catBills, setCatBills] = useState([])
-    const loadedBills = useLoaderData()
-    const navigation = useNavigation();
+
+    const { bills, isBillsLoading } = useContext(BillContext)
+
 
     const handleLoadTypes = (type)=>{
         if(type=='Select all'){
@@ -20,11 +19,10 @@ const Bills = () => {
     }
 
     useEffect(() => {
-        setBills(loadedBills)
-        setCatBills(loadedBills)
-    }, [loadedBills])
+        setCatBills(bills)
+    }, [bills])
 
-    if (navigation.state === 'loading') {
+    if (isBillsLoading) {
         return (
             <div className="h-[80vh] flex items-center justify-center">
                 <LoaderRing />

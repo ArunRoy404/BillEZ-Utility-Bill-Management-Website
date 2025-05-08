@@ -25,7 +25,7 @@ export default function DropDown({ bills, handleLoadTypes }) {
 
     return (
         <div className="mx-auto w-52 ">
-            <Listbox value={selected} onChange={setSelected} __demoMode>
+            <Listbox value={selected} onChange={setSelected} >
                 <ListboxButton
                     className={clsx(
                         'relative block w-full rounded-lg bg-gray-700 py-1.5 pr-8 pl-3 text-left text-sm/6 text-white',
