@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import Avatar from './Avatar';
+import AuthContext from '../../context/AuthContext/AuthContext';
 
 const Navbar = () => {
+
+    const { user } = use(AuthContext)
+    const { balance } = user
 
     const links = (
         <>
@@ -10,6 +14,20 @@ const Navbar = () => {
             <li className='text-lg font-bold'><NavLink to={'/bills'} >Bills</NavLink></li>
             <li className='text-lg font-bold'><NavLink to={'/my-profile'} >My Profile</NavLink></li>
         </>
+    )
+
+    const userOptions = (
+        <div className='flex items-center gap-4'>
+            <p className='text-sm font-bold border-2 border-gray-400 bg-gray-200 px-4 py-2 rounded-3xl' >Current balance: {balance}</p>
+            <Avatar></Avatar>
+        </div>
+    )
+
+    const loginOptions = (
+        <div className='space-x-4 font-bold'>
+            <Link to={'register'} className='text-sm' >Register</Link>
+            <Link to={'/login'} className='btn btn-neutral shadow-none rounded-4xl hover:bg-white hover:text-black border-2 border-black '>Login</Link>
+        </div>
     )
 
     return (
@@ -33,12 +51,13 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <div className='space-x-4 font-bold'>
-                        <Link to={'register'} className='text-sm' >Register</Link>
-                        <Link to={'/login'} className='btn btn-neutral shadow-none rounded-4xl hover:bg-white hover:text-black border-2 border-black '>Login</Link>
-                    </div>
-                    <Avatar></Avatar>
+                <div className="navbar-end mr-3">
+                    {
+                        user
+                            ? userOptions
+                            : loginOptions
+
+                    }
                 </div>
             </div>
         </div>

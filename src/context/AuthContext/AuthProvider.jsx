@@ -37,6 +37,7 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             if (currentUser) {
+                currentUser.balance = 10000
                 setUser(currentUser)
             } else {
                 setUser(null)
