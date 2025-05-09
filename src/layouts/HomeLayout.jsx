@@ -16,7 +16,7 @@ const HomeLayout = () => {
 
     return (
         <div ref={bodyRef} className='p-5 container mx-auto'>
-            <Toaster position="bottom-right" reverseOrder={false}></Toaster>
+            <Toaster position="top-center" reverseOrder={false}></Toaster>
             <header><Navbar></Navbar></header>
             <div className='container mx-auto min-h-[calc(100vh-178px-65px-40px-40px-30px)]'>
                 <Outlet></Outlet>

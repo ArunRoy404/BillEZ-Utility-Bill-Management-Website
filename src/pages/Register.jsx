@@ -106,17 +106,17 @@ const Register = () => {
                             <form onSubmit={handleCreateUser} className="fieldset border-b-2 border-gray-400 border-dashed">
 
                                 <label className="label text-lg font-black text-blue-400">Email</label>
-                                <input name='email' type="email" required className="w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Email" />
+                                <input name='email' type="email" required className="border-2 border-gray-200  w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Email" />
 
                                 <label className="label text-lg font-black text-blue-400">User name</label>
-                                <input name='userName' type="text" required className="w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="username" />
+                                <input name='userName' type="text" required className="border-2 border-gray-200 w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="username" />
 
                                 <label className="label text-lg font-black text-blue-400">Photo URL</label>
-                                <input name='photoURL' type="url" required className="w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="photo URL" />
+                                <input name='photoURL' type="url" required className="border-2 border-gray-200 w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="photo URL" />
 
                                 <label className="label font-bold text-lg text-blue-400">Password</label>
                                 <div className='relative'>
-                                    <input name='password' required type={isPassVisible ? 'text' : "password"} className="w-full focus:outline-none focus:border-2  focus:border-blue-400 input pr-13 font-bold" placeholder="******" />
+                                    <input name='password' required type={isPassVisible ? 'text' : "password"} className="border-2 border-gray-200 w-full focus:outline-none focus:border-2  focus:border-blue-400 input pr-13 font-bold" placeholder="******" />
                                     <button type='button' onClick={() => setIsPassVisible(value => !value)} className='cursor-pointer p-0 h-6 w-4 absolute right-6 top-2 z-10 border-none'>
                                         {
                                             isPassVisible
