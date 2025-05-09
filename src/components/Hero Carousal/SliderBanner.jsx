@@ -5,8 +5,8 @@ const SliderBanner = ({ data }) => {
     const { title, subtitle, ctaText, imgLink } = data
 
     return (
-        <div className='border-2 shadow-sm border-gray-400 flex flex-row-reverse md:flex-row gap-10 justify-center items-center h-50 md:h-100 bg-white rounded-2xl p-8  lg:p-16 lg:pl-10 '>
-            <div className='hidden md:block w-80 h-80 rounded-2xl overflow-hidden flex items-center justify-center'>
+        <div className='border-2 shadow-sm border-gray-400 flex flex-row-reverse md:flex-row gap-10 justify-center items-center h-50 md:h-80 lg:h-100 bg-white rounded-2xl p-8  lg:p-16 lg:pl-10 '>
+            <div className='hidden md:block md:w-60 md:h-55 lg:w-80 lg:h-80 rounded-2xl overflow-hidden flex items-center justify-center'>
                 <img src={imgLink} alt="" />
             </div>
             <div className="flex flex-col justify-center lg:w-1/2">
