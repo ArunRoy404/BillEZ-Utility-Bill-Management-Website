@@ -8,6 +8,10 @@
   themes: light --default;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -41,6 +45,7 @@ html {
   animation-timeline: view();
   animation-range: entry 30% cover 90%;
 }
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

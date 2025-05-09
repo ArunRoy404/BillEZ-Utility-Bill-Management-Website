@@ -23,7 +23,7 @@ const Bills = () => {
 
 
     return (
-        <div className='my-20'>
+        <div className='my-20 w-[100vw]'>
             <h1 className='text-center text-4xl font-bold'>Your Bill Dashboard</h1>
             <h2 className='text-center text-lg font-bold opacity-70 mb-10'>Track pending bills and make payments with just a few clicks.</h2>
 
