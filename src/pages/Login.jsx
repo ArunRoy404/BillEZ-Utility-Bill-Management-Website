@@ -82,7 +82,7 @@ const Login = () => {
                             <form onSubmit={handleLogin} className="fieldset border-b-2 border-gray-400 border-dashed">
 
                                 <label className="label text-lg font-black text-blue-400">Email</label>
-                                <input name='email' type="email" required className="border-2 border-gray-200 w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Email" />
+                                <input name='email' type="email" required className="border-2 border-gray-200 w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Enter email" />
 
                                 <label className="label font-bold text-lg text-blue-400">Password</label>
                                 <div className='relative'>

@@ -43,11 +43,11 @@ const ForgotPassword = () => {
             <div className="w-full  md:w-auto">
                 <div className="card bg-base-100 md:w-lg shrink-0 shadow-2xl border-2 border-gray-300 ">
                     <div className="card-body">
-                        <h1 className='text-4xl font-bold mb-3'>Log In</h1>
+                        <h1 className='text-4xl font-bold mb-3'>Reset Password</h1>
                         <form onSubmit={handleResetEmail} className="fieldset border-b-2 border-gray-400 border-dashed">
 
                             <label className="label text-lg font-black text-blue-400">Email</label>
-                            <input name='email' type="email" required className="border-2 border-gray-200 w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Email" />
+                            <input name='email' type="email" required className="border-2 border-gray-200 w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Enter Email" />
 
                             <p className='text-green-600' >{success}</p>
                             <p className='text-red-400' >{error}</p>

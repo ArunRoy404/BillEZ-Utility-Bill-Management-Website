@@ -19,7 +19,7 @@ const Navbar = () => {
 
     const userOptions = (
         <div className='flex items-center gap-4'>
-            {user && <p className='hidden md:block text-sm font-bold border-2 border-blue-400 bg-gray-100 px-4 py-2 rounded-3xl' >Current balance: {balance}</p>}
+            {user && <p className='hidden md:block text-sm font-bold border-2 border-blue-400 bg-gray-100 px-4 py-2 rounded-3xl' >Current balance: {balance} BDT</p>}
             <Avatar></Avatar>
         </div>
     )

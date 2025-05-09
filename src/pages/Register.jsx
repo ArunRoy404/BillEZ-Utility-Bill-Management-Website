@@ -106,13 +106,13 @@ const Register = () => {
                             <form onSubmit={handleCreateUser} className="fieldset border-b-2 border-gray-400 border-dashed">
 
                                 <label className="label text-lg font-black text-blue-400">Email</label>
-                                <input name='email' type="email" required className="border-2 border-gray-200  w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Email" />
+                                <input name='email' type="email" required className="border-2 border-gray-200  w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Enter email" />
 
                                 <label className="label text-lg font-black text-blue-400">User name</label>
-                                <input name='userName' type="text" required className="border-2 border-gray-200 w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="username" />
+                                <input name='userName' type="text" required className="border-2 border-gray-200 w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Enter username" />
 
                                 <label className="label text-lg font-black text-blue-400">Photo URL</label>
-                                <input name='photoURL' type="url" required className="border-2 border-gray-200 w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="photo URL" />
+                                <input name='photoURL' type="url" required className="border-2 border-gray-200 w-full focus:outline-none focus:border-2  focus:border-blue-400 font-bold input" placeholder="Enter photo URL" />
 
                                 <label className="label font-bold text-lg text-blue-400">Password</label>
                                 <div className='relative'>
