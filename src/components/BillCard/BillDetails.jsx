@@ -4,9 +4,10 @@ import LoaderRing from '../LoaderRing';
 import BillTypeIcon from './BillTypeIcon';
 import { format } from 'date-fns';
 import AuthContext from '../../context/AuthContext/AuthContext';
-import { notifyError, notifySuccess } from '../../utilities/notify';
+import { notifyError, notifySuccess, notifyWarn } from '../../utilities/notify';
 import BillContext from '../../context/BillContext/BillContext';
 import { MdPayment } from "react-icons/md";
+import SelectBank from '../SelectBank';
 
 
 const BillDetails = () => {
@@ -14,6 +15,7 @@ const BillDetails = () => {
     const [loadedBills, setLoadedBills] = useState([])
     const [currentBill, setCurrentBill] = useState(null)
     const [billDueDate, setBillDueDate] = useState(null)
+    const [bank, setBank] = useState(null)
 
     const navigate = useNavigate(null)
     const { bill_id } = useParams();
@@ -23,7 +25,10 @@ const BillDetails = () => {
 
 
     const handlePayBill = () => {
-        if (balance >= currentBill.amount) {
+        if (!bank) {
+            notifyWarn('Payment method not selected')
+        }
+        else if (balance >= currentBill.amount) {
             setBalance(balance => balance - currentBill.amount)
             setStatusPaid(currentBill.id)
             notifySuccess('Bill payed successfully')
@@ -71,6 +76,16 @@ const BillDetails = () => {
         return notBillFound
     }
 
+    const payOption = (
+        <div className='space-x-3'>
+            <SelectBank bank={bank} setBank={setBank} ></SelectBank>
+            <button onClick={handlePayBill} className='w-full md:w-30 btn btn-neutral bg-indigo-400 shadow-none rounded-4xl hover:bg-white hover:text-indigo-400 border-2 border-indigo-400 '>
+                <span><MdPayment size={25}></MdPayment></span>
+                Pay Bill
+            </button>
+        </div>
+    )
+
     return (
         <div>
             <h1 className='md:hidden opacity-70 px-2 text-lg md:text-3xl font-bold mb-5'>Available balance: <span className={`${balance >= currentBill.amount ? 'text-green-600' : 'text-red-300'}`}>{balance}</span> BDT</h1>
@@ -107,10 +122,7 @@ const BillDetails = () => {
                         {
                             currentBill.status == 'paid'
                                 ? <p className='text-lg text-green-400 font-bold'>Bill paid</p>
-                                : <button onClick={handlePayBill} className='w-full md:w-30 mb-10 btn btn-neutral bg-indigo-400 shadow-none rounded-4xl hover:bg-white hover:text-indigo-400 border-2 border-indigo-400 '>
-                                    <span><MdPayment size={25}></MdPayment></span>
-                                    Pay Bill
-                                </button>
+                                : payOption
                         }
                     </div>
                 </div>
