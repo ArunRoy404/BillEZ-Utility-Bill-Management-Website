@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="rounded-2xl footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+        <footer className="rounded-2xl footer sm:footer-horizontal bg-neutral text-neutral-content p-5 md:p-10">
             <aside>
                 <h1 className='text-4xl font-bold'>BillEZ</h1>
                 <p>
@@ -61,7 +61,6 @@ const Footer = () => {
                     </a>
                 </form>
             </nav>
-
         </footer>
     );
 };

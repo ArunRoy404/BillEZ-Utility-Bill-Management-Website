@@ -30,22 +30,6 @@ html {
   overflow-y: scroll;
 }
 
-@keyframes appear {
-  from {
-    height: 0%;
-  }
-
-  to {
-    height: 100%;
-  }
-}
-
-.line {
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 30% cover 90%;
-}
-
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
