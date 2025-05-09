@@ -76,8 +76,7 @@ const Register = () => {
         setIsGoogleBtnLoading(true)
 
         googleLogIn()
-            .then(result => {
-                console.log(result)
+            .then(() => {
                 setSuccess('Login Successful')
                 notifySuccess('Login Successful')
                 reloadUser()

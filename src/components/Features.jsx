@@ -11,7 +11,6 @@ const Features = ({ feature, index }) => {
         });
     }, []);
 
-    console.log(feature);
 
     return (
         <div data-aos={`${index%2==1 ? 'fade-left' : 'fade-right'}`} className="text-left bg-gray-900 p-4 md:p-6 rounded-lg shadow-lg hover:shadow-orange-500/20 hover:shadow-md transition">

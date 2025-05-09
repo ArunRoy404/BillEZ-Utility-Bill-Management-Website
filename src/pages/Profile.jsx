@@ -29,7 +29,7 @@ const Profile = () => {
             reloadUser()
             notifySuccess("Profile updated successfully")
         })
-        .catch(error=>{console.log(error.code);})
+        .catch(error=>{notifyError(error.code)})
 
     }
 

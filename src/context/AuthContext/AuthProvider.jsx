@@ -30,7 +30,6 @@ const AuthProvider = ({ children }) => {
         setIsLoading(true)
         await auth.currentUser.reload().then(()=>{setIsLoading(false)})
         setUser({...auth.currentUser})
-        console.log('sda')
     }
 
     const googleLogIn = () => {
