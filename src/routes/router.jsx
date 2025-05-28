@@ -11,6 +11,7 @@ import Profile from "../pages/Profile";
 import PrivateRoute from "./PrivateRoute";
 import Errorpage from "../pages/Errorpage/Errorpage";
 import UpdateProfile from "../pages/UpdateProfile";
+import TitleProvider from "../providers/TitleProvider";
 
 
 const router = createBrowserRouter([
@@ -20,38 +21,68 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                Component: Home
+                element:
+                    <TitleProvider title={"BillEZ | Home"}>
+                        <Home></Home>
+                    </TitleProvider>
             },
             {
                 path: '/bills',
-                element: <PrivateRoute><Bills></Bills></PrivateRoute>
+                element:
+                    <PrivateRoute>
+                        <TitleProvider title={'BillEZ | Bills'} >
+                            <Bills></Bills>
+                        </TitleProvider>
+                    </PrivateRoute>
             },
             {
                 path: '/bills/:bill_id',
-                element: <PrivateRoute><BillDetails></BillDetails></PrivateRoute>
+                element:
+                    <PrivateRoute>
+                        <BillDetails></BillDetails>
+                    </PrivateRoute>
             },
             {
                 path: '/my-profile',
-                element: <PrivateRoute><Profile></Profile></PrivateRoute>
+                element:
+                    <PrivateRoute>
+                        <TitleProvider title={'BillEZ | View Profile'}>
+                            <Profile></Profile>
+                        </TitleProvider>
+                    </PrivateRoute>
             },
             {
                 path: '/update-profile',
-                element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+                element:
+                    <PrivateRoute>
+                        <TitleProvider title={'BillEZ | Update Profile'}>
+                            <UpdateProfile></UpdateProfile>
+                        </TitleProvider>
+                    </PrivateRoute>
             },
             {
                 path: '/login',
-                Component: Login
+                element:
+                    <TitleProvider title={'BillEZ | Login'}>
+                        <Login></Login>
+                    </TitleProvider>
             },
             {
                 path: '/register',
-                Component: Register
+                element:
+                    <TitleProvider title={'BillEZ | Register'}>
+                        <Register></Register>
+                    </TitleProvider>
             },
             {
                 path: '/forgot-password',
-                Component: ForgotPassword
+                element:
+                    <TitleProvider title={'BillEZ | Forgot Password'}>
+                        <ForgotPassword></ForgotPassword>
+                    </TitleProvider>
             }
         ],
-        errorElement: <Errorpage></Errorpage>
+        errorElement: <TitleProvider title={'BillEZ | Error'}><Errorpage></Errorpage></TitleProvider>
     },
 ]);
 
